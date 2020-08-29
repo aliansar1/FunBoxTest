@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body {
+    background-image: url('img/bg.jpg');
+}
+.container {
+	margin: auto;
+}
+header {
+    text-align: center;
+    color: #fff;
+    margin: 48px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+p {
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding: 16px;
+}
+p a {
+    color: #1698d9;
+    text-decoration: underline dashed;
+}
+.catfood {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fuagra {
+    margin: 40px;
+    height: 550px;
+}
+.food1,.food2,.food3 {
+    width: 320px;
+    height: 480px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, transparent 33px, #f2f2f2 0) right;
+    cursor: pointer;
+}
+.food1 svg path { stroke: #1698d9; stroke-width: 5; fill: none; }
+.food2 svg path { stroke: #d91667; stroke-width: 5; fill: none; }
+.food3 svg path { stroke: #b3b3b3; stroke-width: 5; fill: none; }
+
+/*.food1:hover {
+    box-shadow: 2px 2px 0 2px #1698d9;
+}
+.food2:hover {
+    box-shadow: 2px 2px 0 2px #d91667;
+}
+.food3:hover {
+    box-shadow: 2px 2px 0 2px #b3b3b3;
+}*/
+.food1>.about { background-color: #1698d9; }
+.food2>.about { background-color: #d91667; }
+.food3>.about { background-color: #b3b3b3; }
+.about{
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    top: -110px;
+    margin: 0 20px 0px 210px;
+    color: #fff;
+}
+.about h2 {
+    padding: 5px 0 0 0;
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+.about h3 {
+    padding: 0 0 5px 0;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+}
+.spacial {
+    position: relative;
+    top: -550px;
+    right: -10px;
+    width: 250px;
+}
+.spacial h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2.8em;
+}
+.spacial h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5em;
+    padding: 0 0 10px 0;
+}
+.spacial h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+.select {
+    box-shadow: 5px 5px 5px rgb(255, 255, 255); 
+}
+.selected {
+    background: linear-gradient(135deg, transparent 33px, rgb(196, 196, 196) 0) right;
+}
+@media only screen and (max-width: 765px) {
+    .fuagra {
+        margin: 20px 0 0 0 ;
+    }
+}

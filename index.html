@@ -3,9 +3,118 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+        <title>Fun Box</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap" rel="stylesheet">    </head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <body>
-        
+        <header>
+            <h1>Ты сегодня покормил кота?</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="catfood">
+                    <div class="fuagra">
+                        <div class="food1">
+                            <svg height="480" width="320">
+                                <image xlink:href="img/cat.png" x="-3" y="215" height="260" width="260" />
+                                <path d="M 43 2 300 2" />
+                                <path d="M 300 2 q 18 0 18 15" />
+                                <path d="M 318 465 318 15" />
+                                <path d="M 318 463 q 0 15 -15 15" />
+                                <path d="M 15 478 305 478" />
+                                <path d="M 2 463 q 0 15 15 15" />
+                                <path d="M 2 43 2 464" />
+                                <path d="M 1.5 45 45 1.5" />
+                            </svg>
+                            <div class="about">
+                                <h2>0,5</h2>
+                                <h3>кг</h3>
+                            </div>
+                            <div class="spacial">
+                                <h4>Сказочное заморское яство</h4>
+                                <h2>Нямушка</h2>
+                                <h3>с фуа-гра</h3>
+                                <h4>10 порций</h4>
+                                <h4>мышь в подарок</h4>
+                            </div>
+                        </div>
+                        <p>Че сидишь? Порадуй котэ, <a href="">купи.</a></p>
+                    </div>
+                    <div class="fuagra">
+                        <div class="food2">
+                            <svg height="480" width="320">
+                                <image xlink:href="img/cat.png" x="-3" y="215" height="260" width="260" />
+                                <path d="M 43 2 300 2" />
+                                <path d="M 300 2 q 18 0 18 15" />
+                                <path d="M 318 465 318 15" />
+                                <path d="M 318 463 q 0 15 -15 15" />
+                                <path d="M 15 478 305 478" />
+                                <path d="M 2 463 q 0 15 15 15" />
+                                <path d="M 2 43 2 464" />
+                                <path d="M 1.5 45 45 1.5" />
+                            </svg>
+                            <div class="about">
+                                <h2>2</h2>
+                                <h3>кг</h3>
+                            </div>
+                            <div class="spacial">
+                                <h4>Сказочное заморское яство</h4>
+                                <h2>Нямушка</h2>
+                                <h3>с рыбой</h3>
+                                <h4>40 порций</h4>
+                                <h4>2 мыши в подарок</h4>
+                            </div>
+                        </div>
+                        <p>Головы щучьи с чесноком <br />да свежайшая сёмгушка.</p>
+                    </div>
+                    <div class="fuagra">
+                        <div class="food3">
+                            <svg height="480" width="320">
+                                <image xlink:href="img/cat.png" x="-3" y="215" height="260" width="260" />
+                                <path d="M 43 2 300 2" />
+                                <path d="M 300 2 q 18 0 18 15" />
+                                <path d="M 318 465 318 15" />
+                                <path d="M 318 463 q 0 15 -15 15" />
+                                <path d="M 15 478 305 478" />
+                                <path d="M 2 463 q 0 15 15 15" />
+                                <path d="M 2 43 2 464" />
+                                <path d="M 1.5 45 45 1.5" />
+                            </svg>
+                            <div class="about">
+                                <h2>5</h2>
+                                <h3>кг</h3>
+                            </div>
+                            <div class="spacial">
+                                <h4>Сказочное заморское яство</h4>
+                                <h2>Нямушка</h2>
+                                <h3>с курой</h3>
+                                <h4>100 порций</h4>
+                                <h4>5 мышей в подарок</h4>
+                                <h4>заказчик доволен</h4>
+                            </div>
+                        </div>
+                        <p style="color: #ffff66;">Печалька, с курой закончился.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            $(document).ready(()=>{
+                $('.food1, .food2, .food3').on({
+                    mouseenter: function() {
+                        $(this).addClass("select");
+                    },
+                    mouseleave: function(){
+						$(this).removeClass("select");
+					},
+                    click: function() {
+                        $(this).toggleClass("selected");
+                        $(this).not(this).removeClass("selected");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
